@@ -1,0 +1,42 @@
+.contenttop1{
+	width: 300px;
+	height: 38px;
+	background: linear-gradient(to bottom, #f8f8f8, #ffffff);
+}
+.contenttop1 .img1{
+	margin-top: 12px;
+	margin-left: 10px;
+	float: left;
+}
+.contenttop1 strong{
+	margin-top: 14px;
+	margin-left: 10px;
+	float: left;
+	color: #206759;
+}
+.contenttop1 .img2{
+	margin-top: 12px;
+	margin-right: 10px;
+	float: right;
+}
+.list{
+	width: 280px;
+	height: 580px;
+}
+.list ul{
+	width: 280px;
+	height: 580px;
+	overflow: scroll;
+	overflow-x:hidden
+}
+.list ul li {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px dashed black;
+	z-index: -2;
+}
+.php p{
+	text-indent: 2em;
+	line-height: 25px;
+}

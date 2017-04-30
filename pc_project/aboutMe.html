@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/about.css"/>
+		<link rel="stylesheet" type="text/css" href="css/line1.css"/>
+		<script type="text/javascript">
+			$(function(){
+				test(1);
+				$(".t_bottom li").eq(1).css({
+					"background":"#00cc33"
+				})
+				$(".list ul li").click(function(){
+					var index = $(".list ul li ").index(this);
+					index = index+1;
+					test(index)
+				})
+				function test(link){				
+					var file = "txt/cs"+link+".txt"
+					$.ajax({
+					    type:"POST",
+						url:"txt.php",
+						data:{name:file},
+						success:function(data,st){
+							$(".php").html(data);
+						}	  
+					})
+				}
+				var iUrl = location.href;
+				var sI = iUrl.indexOf("div_id");
+				if(sI!=-1){
+					var nstr = iUrl.substring(sI)
+					var div_id = nstr.substring(7);
+					test(div_id);
+				}
+			})
+		</script>
+	</head>
+	<body>
+		<div class="top">
+			<div class="backtop">
+				<div id="btop">
+					
+				</div>
+				<div id="bmid">
+					
+				</div>
+				<div id="bbot">
+					
+				</div>
+			</div>
+			<div class="t_top">
+				<div class="tt_content">
+					<div class="tt_left">
+						<a href="#">登陆</a>
+						<p>|</p>
+						<a href="#" class="tt_left_a2">免费注册</a>
+					
+					</div>
+					<div class="tt_right">
+						<a href="#">设为首页</a>
+						<p>|</p>
+						<a href="#">加入收藏</a>
+						<p>|</p>
+						<a href="#">在线留言</a>
+						<p>|</p>
+						<a href="#">企业位置</a>
+					</div>
+				</div>
+				
+			</div>
+			<div class="t_middle">
+				<img src="img/logo1.png" class="topimg">
+				<div><strong>北京嘉禾天元保洁服务有限公司</strong></div>
+				<img src="img/hezou.jpg" class="topimg2"/>
+			</div>
+			<div class="t_bottom">
+				<ul>
+					<li class="spe"><a href="index.html" >首页</a></li>
+					<li><a href="aboutMe.html">关于我们</a></li>
+					<li><a href="serviceItem.html">服务项目</a></li>
+					<li><a href="knowledge.html">保洁知识</a></li>
+					<li><a href="serviceCase.html">服务案例</a></li>
+					<li><a href="onlineBook.html">网上预约</a></li>
+					<li><a href="connectOur.html">联系我们</a></li>
+				</ul>
+			</div>
+			
+		</div>
+		<div class="body">
+			<div class="b_top">
+				<ul class="pic">
+					<li></li>
+				</ul>
+				<ul class="but">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			
+			<div class="line1">
+				<div class="www">
+					<span >首页></span><span >关于我们</span>
+				</div>
+				<div class="line1_left">
+					<div class="contenttop1">
+						<img src="img/body/titleT.jpg" class="img1"/>
+						<strong class="strong">保洁知识</strong>
+						<img src="img/body/titleM.jpg" class="img2"/>							
+					</div>
+					<div class="list">
+						<ul>
+							<li>1.新房如何去除异味</li>
+							<li>2.保洁公司支招除尘</li>
+							<li>3.冬季家居新装修</li>
+							<li>4.清洗窍门</li>
+							<li>5.清理热水器</li>
+							<li>666</li>
+							<li>777</li>
+							<li>888</li>
+							<li>999</li>
+							<li>000</li>
+							<li>1111</li>
+							<li>1212</li>
+							<li>1313</li>
+							<li>1414</li>
+							<li>1515</li>
+							<li>1616</li>
+							<li>1716</li>
+							<li>1816</li>
+							<li>1916</li>
+							<li>2016</li>
+							<li>2116</li>
+							<li>2216</li>
+						</ul>
+					</div>
+					
+					
+					
+				</div>
+				<div class="line1_right php">
+					
+				</div>
+				<div class="clear"></div> 
+			</div>
+			<div class="line4">
+				<div class="line4_top">
+					<img src="img/body/titleT.jpg"/>
+					<strong>合作伙伴</strong>
+					<img src="img/body/titleM.jpg" id="more"/>
+				</div>
+				<div class="line4_bottom">
+					<p>石家庄搬家</p>
+					<p>北京地毯清洗</p>
+					<p>北京社保通</p>
+					<p>石家庄搬家</p>
+					<p>石家庄搬家</p>
+					<p>石家庄搬家</p>
+					<p>石家庄搬家</p>
+					<p>石家庄搬家</p>
+					<p>石家庄搬家</p>
+					<p>石家庄搬家</p>
+					<p>石家庄搬家</p>
+					<p>石家庄搬家</p>
+				</div>
+			</div>
+			
+			
+			<div class="bottom">
+				<div class="footer">
+					 <div class="backfoot"></div> 
+					 <div class="backcontent">
+					 	<ul>
+					 		<li><p>首页</p><p>|</p></li>
+					 		<li><p>关于我们</p><p>|</p></li>
+					 		<li><p>服务项目</p><p>|</p></li>
+					 		<li><p>保洁知识</p><p>|</p></li>
+					 		<li><p>服务案例</p><p>|</p></li>
+					 		<li><p>网上预约</p><p>|</p></li>
+					 		<li><p>联系我们</p><p>|</p></li>
+					 		<li><p>服务案例</p></li>
+					 	</ul>
+					 </div>
+				</div>
+				<div class="copy">
+					<p>copy right 2017-2017 all right reserverd by 北京嘉xx有限公司 版权所有</p>
+				</div>
+			</div>
+		</div>
+		<script src="js/demo1.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
